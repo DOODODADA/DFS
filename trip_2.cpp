@@ -170,6 +170,9 @@ int main(){
             destination = name_to_index[name];
             if(tourist_spots[destination].open_close == false)
                 cout << "No such optimal path to " << name << endl;
+            else if (source == target){
+                cout << "Optimal " << con << " : " << name << endl;
+            }
             else{
                 time_flow = (con == "TIME")?true:false;
                 ans_route.init_route(source, destination);
@@ -185,6 +188,9 @@ int main(){
             destination = name_to_index[name];
             if(tourist_spots[destination].open_close == false)
                 cout << "No such limited path to " << name << endl;
+            else if (source == target){
+                cout << "Limited " << con << " : " << name << endl;
+            }
             else{
                 time_flow = (con == "TIME")?true:false;
                 ans_route.init_route(source, destination);
